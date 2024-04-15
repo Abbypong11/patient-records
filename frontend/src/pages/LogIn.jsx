@@ -26,8 +26,8 @@ export default function Login() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "100vh",
-        overflow: 'hidden',
+        height: "600px",
+        overflow: "hidden",
         backgroundImage: `url(${BackgroundImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -39,8 +39,7 @@ export default function Login() {
           flexDirection: "column",
           alignItems: "center",
           borderRadius: "10px",
-          boxShadow: "3",
-          width: "35%",
+          width: { xs: "90%", sm: "80%", md: "70%", lg: "60%", xl: "50%" }, // Responsive width
           padding: "20px",
           backgroundColor: "rgba(255, 255, 255, 0.8)", // Translucent white background
         }}
@@ -48,18 +47,14 @@ export default function Login() {
         <div className="flex justify-center font-bold text-blue-700 text-2xl">
           <p>Login</p>
         </div>
-        <FormControl
-          style={{ marginBottom: "50px" }}
-          fullWidth
-          sx={{ m: 1, width: "46ch" }}
-        >
+        <FormControl style={{ marginBottom: "20px" }} fullWidth sx={{ m: 1 }}>
           <InputLabel htmlFor="standard-adornment-amount">Username</InputLabel>
           <Input id="standard-adornment-amount" label="Username" />
         </FormControl>
         <FormControl
           style={{ marginBottom: "20px" }}
           fullWidth
-          sx={{ m: 1, width: "46ch" }}
+          sx={{ m: 1 }}
           variant="standard"
         >
           <InputLabel htmlFor="standard-adornment-password">
@@ -81,13 +76,13 @@ export default function Login() {
             }
           />
         </FormControl>
-        <Button
-          style={{ marginBottom: "10px" }}
-          sx={{ bgcolor: "#1d4ed8", width: "52ch" }}
+        <Link to="/me">     <Button
+          style={{ marginBottom: "20px" }}
+          sx={{ bgcolor: "#1d4ed8", width: "100%" }}
           variant="contained"
         >
           Login
-        </Button>
+        </Button></Link>   
         <div className="flex justify-center text-blue-700 mb-5">
           <p>Forgotten Password?</p>
         </div>

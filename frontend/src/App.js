@@ -14,11 +14,11 @@ const router = createBrowserRouter([
   { path: "/register", element: <Register /> },
   { path: "/", element: <LogIn /> },
   { path: "/me", element: <UserProfile /> },
-  { path: "/patient", element: <AddPatient /> },
+  { path: "/addpatient", element: <AddPatient /> },
   { path: "/patients", element: <ViewAllpatients /> },
   { path: "/vitals", element: <AddVitalSigns /> },
   { path: "/diagnosis", element: <AddDiagnosis /> },
-  { path: "/recipes/:id", element: <SinglePatient /> },
+  { path: "/patient", element: <SinglePatient /> },
 ]);
 
 function App() {

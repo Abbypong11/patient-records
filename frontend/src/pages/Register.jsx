@@ -10,6 +10,8 @@ import Button from "@mui/material/Button";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { Link } from "react-router-dom";
+
 import BackgroundImage from "../assets/heartmonitor.jpeg";
 
 const Register = () => {
@@ -27,7 +29,7 @@ const Register = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "100vh",
+        height: "900px",
         overflow: "hidden",
         backgroundImage: `url(${BackgroundImage})`,
         backgroundSize: "cover",
@@ -49,7 +51,7 @@ const Register = () => {
         }}
       >
         <div>
-          <div className="flex justify-center font-bold text-blue-700 text-2xl">
+          <div className="flex justify-center font-bold text-blue-700 text-2xl ">
             <p>Sign Up</p>
           </div>
           <Formik
@@ -191,14 +193,16 @@ const Register = () => {
                   </FormControl>
                 )}
               </Field>
-              <Button
-                style={{ marginBottom: "20px" }}
-                sx={{ bgcolor: "#1d4ed8", width: "52ch" }}
-                variant="contained"
-                type="submit"
-              >
-                Register
-              </Button>
+              <Link to="/me">
+                <Button
+                  style={{ marginBottom: "20px" }}
+                  sx={{ bgcolor: "#1d4ed8", width: "52ch" }}
+                  variant="contained"
+                  type="submit"
+                >
+                  Register
+                </Button>
+              </Link>
             </Form>
           </Formik>
         </div>
