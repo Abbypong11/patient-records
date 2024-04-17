@@ -11,8 +11,7 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Link } from "react-router-dom";
-
-// import BackgroundImage from "../assets/heartmonitor.jpeg";
+// import BackgroundImage from "../assets/hospital.jpg";
 
 const Register = () => {
   const [showPassword, setShowPassword] = React.useState(false);
@@ -36,6 +35,7 @@ const Register = () => {
         backgroundPosition: "center",
       }}
     >
+      
       <Box
         sx={{
           display: "flex",
@@ -52,7 +52,7 @@ const Register = () => {
       >
         <div>
           <div className="flex justify-center font-bold text-blue-700 text-2xl ">
-            <p>Sign Up</p>
+            <p>Register</p>
           </div>
           <Formik
             initialValues={{

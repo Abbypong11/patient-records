@@ -8,7 +8,7 @@ const Login = () => {
         <img
           src={loginImage}
           alt="Login"
-          className="max-w-full h-auto md:max-h-full"
+          className="w-96 h-auto md:max-h-full mb-4"
         />
       </div>
       <div className="w-1/2 bg-gray-100 shadow-md rounded-lg p-8 flex justify-center items-center h-full">
@@ -54,7 +54,7 @@ const Login = () => {
               Login
             </button>
             <div className="text-center">
-              <a href="" className="text-sm text-gray-600 hover:underline">
+              <a href="/register" className="text-sm text-gray-600 hover:underline">
                 Forgotten Password?
               </a>
             </div>

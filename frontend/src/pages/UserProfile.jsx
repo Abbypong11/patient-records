@@ -1,7 +1,6 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-// import BackgroundImage from "../assets/hospital.jpg";
-// import Sidebar from "../components/sidebar";
+import UserProfileCard from "../components/userProfileCards";
+
 
 export default function UserProfile() {
   return (
@@ -9,21 +8,21 @@ export default function UserProfile() {
       <div className="flex h-full">
         <div className="flex w-1/6 h-full pt-20 bg-blue-600">
           <ul>
-            <button className="text-white text-leftfont-semibold p-4">
-              {" "}
-              Patients Records{" "}
+            <button className="text-white text-left font-semibold p-4">
+              Patients Records
             </button>
             <button className="text-white text-left font-semibold p-4">
-              Add new Patient 
+              Add new Patient
             </button>
             <button className="text-white text-left font-semibold p-4">
               Log Out
             </button>
           </ul>
         </div>
-        <div className="flex flex-col w-5/6 mx-5 my-4">
-          <p>Profile</p>
-          <p></p>
+        <div className="flex flex-col w-5/6 mx-5 my-4 ">
+          <div>
+            <UserProfileCard />
+          </div>
         </div>
       </div>
     </div>
