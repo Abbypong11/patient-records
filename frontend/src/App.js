@@ -9,10 +9,13 @@ import AddDiagnosis from "./pages/AddDiagnosis";
 import SinglePatient from "./pages/SinglePatient";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Navbar from "./components/navbar";
+import HomePage from "./pages/Home";
 
 const router = createBrowserRouter([
+
   { path: "/register", element: <Register /> },
-  { path: "/", element: <LogIn /> },
+  { path: "/", element: <HomePage /> },
+  { path: "/login", element: <LogIn /> },
   { path: "/me", element: <UserProfile /> },
   { path: "/addpatient", element: <AddPatient /> },
   { path: "/patients", element: <ViewAllpatients /> },

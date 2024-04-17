@@ -206,7 +206,7 @@ const AddPatient = () => {
               htmlFor="pressure"
               className="block text-gray-700 font-bold mb-2"
             >
-              Pressure (Unit):
+              Blood Pressure (mmHg):
             </label>
             <input
               type="text"
@@ -283,7 +283,7 @@ const AddPatient = () => {
             sx={{ bgcolor: "#1d4ed8", width: "100%" }}
             variant="contained"
           >
-            Submit
+            Add Patient
           </Button>
         </Link>
       </div>

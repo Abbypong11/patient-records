@@ -51,10 +51,15 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+const StickyAppBar = styled(AppBar)(({ theme }) => ({
+  top: 0,
+  zIndex: theme.zIndex.drawer + 1,
+}));
+
 export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <StickyAppBar position="sticky">
         <Toolbar>
           <IconButton
             size="large"
@@ -71,7 +76,7 @@ export default function Navbar() {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            MediCare
+            MediKeep Patient Records Management System 
           </Typography>
           <Search>
             <SearchIconWrapper>
@@ -83,7 +88,7 @@ export default function Navbar() {
             />
           </Search>
         </Toolbar>
-      </AppBar>
+      </StickyAppBar>
     </Box>
   );
 }

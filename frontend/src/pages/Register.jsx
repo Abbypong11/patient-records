@@ -12,7 +12,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Link } from "react-router-dom";
 
-import BackgroundImage from "../assets/heartmonitor.jpeg";
+// import BackgroundImage from "../assets/heartmonitor.jpeg";
 
 const Register = () => {
   const [showPassword, setShowPassword] = React.useState(false);
@@ -31,7 +31,7 @@ const Register = () => {
         alignItems: "center",
         height: "900px",
         overflow: "hidden",
-        backgroundImage: `url(${BackgroundImage})`,
+        // backgroundImage: `url(${BackgroundImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
