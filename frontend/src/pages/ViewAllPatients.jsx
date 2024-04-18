@@ -31,7 +31,7 @@ const ViewAllPatients = ({ patients, onDelete }) => {
               <th className="border border-gray-400 px-4 py-2">female</th>
               <th className="border border-gray-400 px-4 py-2">Accra</th>
               <th className="border border-gray-400 px-4 py-2">7746352</th>
-              <th className="border border-gray-400 px-4 py-2">edit/delete</th>
+              <th className="border border-gray-400 px-4 py-2"></th>
             </tr>
           </thead>
           <thead>
@@ -42,7 +42,7 @@ const ViewAllPatients = ({ patients, onDelete }) => {
               <th className="border border-gray-400 px-4 py-2">female</th>
               <th className="border border-gray-400 px-4 py-2">Accra</th>
               <th className="border border-gray-400 px-4 py-2">7746352</th>
-              <th className="border border-gray-400 px-4 py-2">edit/delete</th>
+              <th className="border border-gray-400 px-4 py-2"></th>
             </tr>
           </thead>
           <thead>
@@ -53,7 +53,7 @@ const ViewAllPatients = ({ patients, onDelete }) => {
               <th className="border border-gray-400 px-4 py-2">male</th>
               <th className="border border-gray-400 px-4 py-2">Tema</th>
               <th className="border border-gray-400 px-4 py-2">1234</th>
-              <th className="border border-gray-400 px-4 py-2">edit/Delete</th>
+              <th className="border border-gray-400 px-4 py-2"></th>
             </tr>
           </thead>
           {/* <tbody>
