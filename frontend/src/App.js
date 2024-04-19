@@ -7,27 +7,33 @@ import ViewAllpatients from "./pages/ViewAllPatients";
 import AddVitalSigns from "./pages/AddVitalSigns";
 import AddDiagnosis from "./pages/AddDiagnosis";
 import SinglePatient from "./pages/SinglePatient";
+import Dashboard from "./pages/Dashboard";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Navbar from "./components/navbar";
 import HomePage from "./pages/Home";
 
 const router = createBrowserRouter([
-
   { path: "/register", element: <Register /> },
   { path: "/", element: <HomePage /> },
   { path: "/login", element: <LogIn /> },
-  { path: "/me", element: <UserProfile /> },
-  { path: "/addpatient", element: <AddPatient /> },
-  { path: "/patients", element: <ViewAllpatients /> },
-  { path: "/vitals", element: <AddVitalSigns /> },
-  { path: "/diagnosis", element: <AddDiagnosis /> },
-  { path: "/patient", element: <SinglePatient /> },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
+    children: [
+      { path: "/dashboard/me", element: <UserProfile /> },
+      { path: "/dashboard/addpatient", element: <AddPatient /> },
+      { path: "/dashboard/patients", element: <ViewAllpatients /> },
+      { path: "/dashboard/patient", element: <SinglePatient /> },
+      { path: "/dashboard/addvitals", element: <AddVitalSigns /> },
+      { path: "/dashboard/adddiagnosis", element: <AddDiagnosis /> },
+    ],
+  },
 ]);
 
 function App() {
   return (
     <>
-    <Navbar/>
+     
       <RouterProvider router={router} />
     </>
   );

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 
 const AddPatient = () => {
@@ -13,37 +12,10 @@ const AddPatient = () => {
     emergencyContact: "",
   });
 
-  const [vitalSigns, setVitalSigns] = useState({
-    temperature: "",
-    pressure: "",
-    weight: "",
-    height: "",
-  });
-
-  const [diagnosis, setDiagnosis] = useState({
-    summary: "",
-  });
-
   const handlePatientInfoChange = (e) => {
     const { name, value } = e.target;
     setPatientInfo({
       ...patientInfo,
-      [name]: value,
-    });
-  };
-
-  const handleVitalSignsChange = (e) => {
-    const { name, value } = e.target;
-    setVitalSigns({
-      ...vitalSigns,
-      [name]: value,
-    });
-  };
-
-  const handleDiagnosisChange = (e) => {
-    const { name, value } = e.target;
-    setDiagnosis({
-      ...diagnosis,
       [name]: value,
     });
   };
@@ -179,113 +151,14 @@ const AddPatient = () => {
         </div>
       </section>
 
-      <hr className="my-8" />
-
-      <section>
-        <h1 className="text-2xl font-bold mb-4">Vital Signs</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="mb-4">
-            <label
-              htmlFor="temperature"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              Temperature (°C):
-            </label>
-            <input
-              type="text"
-              id="temperature"
-              name="temperature"
-              value={vitalSigns.temperature}
-              onChange={handleVitalSignsChange}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="pressure"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              Blood Pressure (mmHg):
-            </label>
-            <input
-              type="text"
-              id="pressure"
-              name="pressure"
-              value={vitalSigns.pressure}
-              onChange={handleVitalSignsChange}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="weight"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              Weight (kg):
-            </label>
-            <input
-              type="text"
-              id="weight"
-              name="weight"
-              value={vitalSigns.weight}
-              onChange={handleVitalSignsChange}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="height"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              Height (cm):
-            </label>
-            <input
-              type="text"
-              id="height"
-              name="height"
-              value={vitalSigns.height}
-              onChange={handleVitalSignsChange}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
-              required
-            />
-          </div>
-        </div>
-      </section>
-
-      <hr className="my-8" />
-
-      <section>
-        <h1 className="text-2xl font-bold mb-4">Diagnosis</h1>
-        <div className="mb-4">
-          <label
-            htmlFor="summary"
-            className="block text-gray-700 font-bold mb-2"
-          >
-            Summary:
-          </label>
-          <textarea
-            id="summary"
-            name="summary"
-            value={diagnosis.summary}
-            onChange={handleDiagnosisChange}
-            className="w-full h-32 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 resize-none"
-            required
-          ></textarea>
-        </div>
-      </section>
       <div>
-        <Link to="/patients">
-          <Button
-            style={{ marginBottom: "20px" }}
-            sx={{ bgcolor: "#1d4ed8", width: "100%" }}
-            variant="contained"
-          >
-            Add Patient
-          </Button>
-        </Link>
+        <Button
+          style={{ marginBottom: "20px" }}
+          sx={{ bgcolor: "#1d4ed8", width: "100%" }}
+          variant="contained"
+        >
+          Add Patient
+        </Button>
       </div>
     </div>
   );

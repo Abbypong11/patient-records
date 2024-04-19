@@ -1,31 +1,17 @@
 import React from "react";
-import UserProfileCard from "../components/userProfileCards";
-import { Link } from "react-router-dom";
 
-
-export default function UserProfile() {
+const UserProfile = () => {
   return (
-    <div className="relative h-screen overflow-hidden">
-      <div className="flex h-full">
-        <div className="flex w-1/6 h-full pt-20 bg-blue-600">
-          <ul>
-          <Link to="/patients">  <button className="text-white text-left font-semibold p-4">
-              Patients Records
-            </button></Link>
-        <Link to="/addpatient">    <button className="text-white text-left font-semibold p-4">
-              Add new Patient
-            </button></Link>
-          <Link to="/">  <button className="text-white text-left font-semibold p-4">
-              Log Out
-            </button></Link>
-          </ul>
-        </div>
-        <div className="flex flex-col w-5/6 mx-5 my-4 bg-gray-50 ">
-          <div>
-            <UserProfileCard />
-          </div>
+    <div className="flex items-center justify-center">
+      <div className="bg-gray-400 w-1/3 mt-10 rounded-lg ">
+        <div className="flex items-center justify-center pt-10">
+          <img src="" alt="" className="rounded-full w-32" />
+          <h1>Jane Doe</h1>
+          <h2>Doctor/Nurse</h2>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default UserProfile;

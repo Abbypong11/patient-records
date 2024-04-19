@@ -1,65 +1,122 @@
 import React, { useState } from "react";
+import { Button } from "@mui/material";
 
 const AddVitalSigns = () => {
-  const [pressure, setPressure] = useState("");
-  const [temperature, setTemperature] = useState("");
-  const [weight, setWeight] = useState("");
-  const [height, setHeight] = useState("");
+  const [vitalSignsInfo, setVitalSignsInfo] = useState({
+    patientId: "",
+    temperature: "",
+    bloodPressure: "",
+    weight: "",
+    height: "",
+  });
+
+  const handleVitalSignsInfoChange = (e) => {
+    const { name, value } = e.target;
+    setVitalSignsInfo({
+      ...vitalSignsInfo,
+      [name]: value,
+    });
+  };
 
   return (
-    <div className="flex flex-col space-y-4">
-      <h1 className="text-2xl font-bold mb-4">Vitals</h1>
-      <div className="flex space-x-4">
-        <div className="flex items-center pb-5">
-          <label htmlFor="pressure" className="mr-2">
-            Blood Pressure:
-          </label>
-          <input
-            type="text"
-            id="pressure"
-            value={pressure}
-            onChange={(e) => setPressure(e.target.value)}
-            className="border border-gray-400 px-2 py-1 rounded"
-          />
-        </div>
-        <div className="flex items-center">
-          <label htmlFor="temperature" className="mr-2">
-            Temperature:
-          </label>
-          <input
-            type="text"
-            id="temperature"
-            value={temperature}
-            onChange={(e) => setTemperature(e.target.value)}
-            className="border border-gray-400 px-2 py-1 rounded"
-          />
-        </div>
+    <div className="container mx-auto p-4 bg-gray-50">
+      <div className="mb-4">
+        <label
+          htmlFor="patientId"
+          className="block text-gray-700 font-bold mb-2"
+        >
+          Select Patient:
+        </label>
+        <select
+          id="patientId"
+          name="patientId"
+          value={vitalSignsInfo.patientId}
+          onChange={handleVitalSignsInfoChange}
+          className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+          required
+        >
+          <option value="patiendId">Patient Name</option>
+        </select>
       </div>
-      <div className="flex space-x-4">
-        <div className="flex items-center">
-          <label htmlFor="weight" className="mr-2">
-            Weight:
-          </label>
-          <input
-            type="text"
-            id="weight"
-            value={weight}
-            onChange={(e) => setWeight(e.target.value)}
-            className="border border-gray-400 px-2 py-1 rounded"
-          />
+      <section>
+        <h1 className="text-2xl font-bold mb-8">Vital Signs</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="mb-4">
+            <label
+              htmlFor="temperature"
+              className="block text-gray-700 font-bold mb-2"
+            >
+              Temperature (°C):
+            </label>
+            <input
+              type="text"
+              id="temperature"
+              name="temperature"
+              value={vitalSignsInfo.temperature}
+              onChange={handleVitalSignsInfoChange}
+              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              htmlFor="pressure"
+              className="block text-gray-700 font-bold mb-2"
+            >
+              Blood Pressure (mmHg):
+            </label>
+            <input
+              type="text"
+              id="bloodPressure"
+              name="bloodPressure"
+              value={vitalSignsInfo.bloodPressure}
+              onChange={handleVitalSignsInfoChange}
+              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              htmlFor="weight"
+              className="block text-gray-700 font-bold mb-2"
+            >
+              Weight (kg):
+            </label>
+            <input
+              type="text"
+              id="weight"
+              name="weight"
+              value={vitalSignsInfo.weight}
+              onChange={handleVitalSignsInfoChange}
+              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              htmlFor="height"
+              className="block text-gray-700 font-bold mb-2"
+            >
+              Height (cm):
+            </label>
+            <input
+              type="text"
+              id="height"
+              name="height"
+              value={vitalSignsInfo.height}
+              onChange={handleVitalSignsInfoChange}
+              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+              required
+            />
+          </div>
         </div>
-        <div className="flex items-center">
-          <label htmlFor="height" className="mr-2">
-            Height:
-          </label>
-          <input
-            type="text"
-            id="height"
-            value={height}
-            onChange={(e) => setHeight(e.target.value)}
-            className="border border-gray-400 px-2 py-1 rounded"
-          />
-        </div>
+      </section>
+
+      <div>
+        <Button
+          style={{ marginBottom: "20px" }}
+          sx={{ bgcolor: "#1d4ed8", width: "100%" }}
+          variant="contained"
+        >
+          Add Vital Signs
+        </Button>
       </div>
     </div>
   );

@@ -1,10 +1,10 @@
-import { Schema } from "mongoose";
+import { Schema, model, Types } from "mongoose";
 
 // Define diagnosis schema
 const DiagnosisSchema = new Schema({
-  patientId: { type: String, required: true, ObjectId },
-
+  patientId: { type: Types.ObjectId, required: true },
   summary: { type: String, required: true },
 });
 
-export const DiagnosisModel = model("Diagnosis", DiagnosisSchema);
+const DiagnosisModel = model("Diagnosis", DiagnosisSchema);
+export default DiagnosisModel;

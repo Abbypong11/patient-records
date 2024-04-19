@@ -10,7 +10,7 @@ import Button from "@mui/material/Button";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // import BackgroundImage from "../assets/hospital.jpg";
 
 const Register = () => {
@@ -35,7 +35,6 @@ const Register = () => {
         backgroundPosition: "center",
       }}
     >
-      
       <Box
         sx={{
           display: "flex",
@@ -193,16 +192,14 @@ const Register = () => {
                   </FormControl>
                 )}
               </Field>
-              <Link to="/me">
-                <Button
-                  style={{ marginBottom: "20px" }}
-                  sx={{ bgcolor: "#1d4ed8", width: "52ch" }}
-                  variant="contained"
-                  type="submit"
-                >
-                  Register
-                </Button>
-              </Link>
+              <Button
+                style={{ marginBottom: "20px" }}
+                sx={{ bgcolor: "#1d4ed8", width: "52ch" }}
+                variant="contained"
+                type="submit"
+              >
+                Register
+              </Button>
             </Form>
           </Formik>
         </div>

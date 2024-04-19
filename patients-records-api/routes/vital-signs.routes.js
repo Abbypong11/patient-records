@@ -11,6 +11,8 @@ router.get("/:id", getVitalSigns);
 
 router.get("/", getAllVitalSigns);
 
+export default router;
+
 
 
 

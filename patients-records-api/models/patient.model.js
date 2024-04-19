@@ -8,4 +8,5 @@ const patientSchema = new Schema({
   phoneNumber: { type: Number, required: true },
   emergencyContact: { type: String, required: true },
 });
-export const PatientModel = model("Patient", patientSchema, "patients");
+const PatientModel = model("Patient", patientSchema, "patients");
+export default PatientModel;

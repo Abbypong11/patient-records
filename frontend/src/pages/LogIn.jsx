@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import loginImage from "../assets/heartmonitor.jpeg";
 
 const Login = () => {
@@ -20,14 +21,14 @@ const Login = () => {
                 htmlFor="email"
                 className="block text-gray-700 font-bold mb-2"
               >
-                Username
+                Email
               </label>
               <input
-                type="username"
-                id="username"
-                name="username"
+                type="email"
+                id="email"
+                name="email"
                 className="w-full border border-gray-300 rounded-lg py-2 px-3 focus:outline-none focus:border-blue-500"
-                placeholder="Enter your username"
+                placeholder="Enter your email"
                 required
               />
             </div>
@@ -54,7 +55,10 @@ const Login = () => {
               Login
             </button>
             <div className="text-center">
-              <a href="/register" className="text-sm text-gray-600 hover:underline">
+              <a
+                href="/register"
+                className="text-sm text-gray-600 hover:underline"
+              >
                 Forgotten Password?
               </a>
             </div>
@@ -62,9 +66,9 @@ const Login = () => {
               <span className="text-sm text-gray-600">
                 Don't have an account?
               </span>
-              <a href="/register" className="text-blue-500 hover:underline">
+              <Link to="/register" className="text-blue-500 hover:underline">
                 Register Here
-              </a>
+              </Link>
             </div>
           </form>
         </div>

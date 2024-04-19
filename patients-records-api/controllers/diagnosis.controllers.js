@@ -1,11 +1,32 @@
-import { DiagnosisModel } from "../models/diagnosis.model.js";
+import DiagnosisModel from "../models/diagnosis.model.js";
 
-export const getDiagnosis = async (req, res) => {
+export const addDiagnosis = async (req, res, next) => {
   try {
-    const diagnosis = await DiagnosisModel.find();
+    const addDiagnosis = await DiagnosisModel.create(req.body);
 
-    res.status(200).json(diagnosis);
+    res.status(200).json(addDiagnosis);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    next(error);
+  }
+};
+
+export const getDiagnosis = async (req, res, next) => {
+  const { id } = req.params;
+  try {
+    const getDiagnosis = await DiagnosisModel.findById(id);
+
+    res.status(200).json(getDiagnosis);
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const getAllDiagnosis = async (req, res, next) => {
+  try {
+    const getAllDiagnosis = await DiagnosisModel.find({});
+
+    res.status(200).json(getAllDiagnosis);
+  } catch (error) {
+    next(error);
   }
 };
