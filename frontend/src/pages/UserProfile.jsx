@@ -1,17 +1,66 @@
-import React from "react";
+import React, { useState } from 'react';
 
-const UserProfile = () => {
+const Profile = () => {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [profession, setProfession] = useState('');
+  const [email, setEmail] = useState('');
+  const [image, setImage] = useState(null);
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    setImage(URL.createObjectURL(file));
+  };
+
   return (
-    <div className="flex items-center justify-center">
-      <div className="bg-gray-400 w-1/3 mt-10 rounded-lg ">
-        <div className="flex items-center justify-center pt-10">
-          <img src="" alt="" className="rounded-full w-32" />
-          <h1>Jane Doe</h1>
-          <h2>Doctor/Nurse</h2>
-        </div>
-      </div>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      <h1 className='font-bold mb-16 text-4xl'>My Profile</h1>
+      {image && (
+        <img
+          className="w-32 h-32 rounded-full mb-4"
+          src={image}
+          alt="Profile"
+        />
+      )}
+      {!image && (
+        <div className="w-32 h-32 bg-gray-300 rounded-full mb-4"></div>
+      )}
+      <input
+        type="file"
+        accept="image/*"
+        onChange={handleImageChange}
+        className="mb-4"
+      />
+      <input
+        type="text"
+        placeholder="FirstName"
+        value={firstName}
+        onChange={(e) => setFirstName(e.target.value)}
+        className="w-full p-2 border rounded-md mb-4"
+      />
+      <input
+        type="text"
+        placeholder="LastName"
+        value={lastName}
+        onChange={(e) => setLastName(e.target.value)}
+        className="w-full p-2 border rounded-md mb-4"
+      />
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="w-full p-2 border rounded-md mb-4"
+        />
+      <input
+        type="text"
+        placeholder="Profession"
+        value={profession}
+        onChange={(e) => setProfession(e.target.value)}
+        className="w-full p-2 border rounded-md mb-4"
+      />
     </div>
   );
 };
 
-export default UserProfile;
+export default Profile;

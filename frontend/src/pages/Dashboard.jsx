@@ -8,10 +8,14 @@ export default function Dashboard() {
       <Navbar />
       <div className="relative h-screen overflow-hidden">
         <div className="flex h-full">
-          <div className="flex w-1/6 h-full pt-20 bg-blue-600">
+          <div className="flex w-1/6 h-full pt-10 bg-blue-600">
             <ul>
+              <Link to="/dashboard/me">
+                <button className="text-white text-left font-semibold p-4">
+                 Dashboard
+                </button>
+              </Link>
               <Link to="/dashboard/patients">
-                {" "}
                 <button className="text-white text-left font-semibold p-4">
                   Patients Records
                 </button>

@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
-import UserRoutes from "./routes/user.routes.js";
+import userRoutes from "./routes/user.routes.js";
 import patientRoutes from "./routes/patient.routes.js";
 import vitalSignsRoutes from "./routes/vital-signs.routes.js";
 import diagnosisRoutes from "./routes/diagnosis.routes.js";

@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const SinglePatient = () => {
   const [patientInfo, setPatientInfo] = useState({
-    patientId: '',
-    name: '',
-    dateOfBirth: '',
-    gender: '',
-    address: '',
-    phoneNumber: '',
-    emergencyContact: '',
+    patientId: "",
+    name: "",
+    dateOfBirth: "",
+    gender: "",
+    address: "",
+    phoneNumber: "",
+    emergencyContact: "",
   });
 
   const [vitalSigns, setVitalSigns] = useState({
-    temperature: '',
-    pressure: '',
-    weight: '',
-    height: '',
+    temperature: "",
+    pressure: "",
+    weight: "",
+    height: "",
   });
 
   const [diagnosis, setDiagnosis] = useState({
-    summary: '',
+    summary: "",
   });
 
   const handlePatientInfoChange = (e) => {
@@ -52,7 +52,12 @@ const SinglePatient = () => {
         <h1 className="text-2xl font-bold mb-8">Patient Information</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="mb-4">
-            <label htmlFor="patientId" className="block text-gray-700 font-bold mb-2">Patient ID:</label>
+            <label
+              htmlFor="patientId"
+              className="block text-gray-700 font-bold mb-2"
+            >
+              Patient ID:
+            </label>
             <input
               type="text"
               id="patientId"
@@ -64,7 +69,12 @@ const SinglePatient = () => {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="name" className="block text-gray-700 font-bold mb-2">Name:</label>
+            <label
+              htmlFor="name"
+              className="block text-gray-700 font-bold mb-2"
+            >
+              Name:
+            </label>
             <input
               type="text"
               id="name"
@@ -72,11 +82,15 @@ const SinglePatient = () => {
               value={patientInfo.name}
               onChange={handlePatientInfoChange}
               className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
-              
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="dateOfBirth" className="block text-gray-700 font-bold mb-2">Date of Birth:</label>
+            <label
+              htmlFor="dateOfBirth"
+              className="block text-gray-700 font-bold mb-2"
+            >
+              Date of Birth:
+            </label>
             <input
               type="date"
               id="dateOfBirth"
@@ -84,24 +98,30 @@ const SinglePatient = () => {
               value={patientInfo.dateOfBirth}
               onChange={handlePatientInfoChange}
               className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
-              
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="gender" className="block text-gray-700 font-bold mb-2">Gender:</label>
+            <label
+              htmlFor="gender"
+              className="block text-gray-700 font-bold mb-2"
+            >
+              Gender:
+            </label>
             <select
               id="gender"
               name="gender"
               value={patientInfo.gender}
               onChange={handlePatientInfoChange}
               className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
-              
-            >
-            
-            </select>
+            ></select>
           </div>
           <div className="mb-4">
-            <label htmlFor="address" className="block text-gray-700 font-bold mb-2">Address:</label>
+            <label
+              htmlFor="address"
+              className="block text-gray-700 font-bold mb-2"
+            >
+              Address:
+            </label>
             <input
               type="text"
               id="address"
@@ -109,11 +129,15 @@ const SinglePatient = () => {
               value={patientInfo.address}
               onChange={handlePatientInfoChange}
               className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
-              
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="phoneNumber" className="block text-gray-700 font-bold mb-2">Phone Number:</label>
+            <label
+              htmlFor="phoneNumber"
+              className="block text-gray-700 font-bold mb-2"
+            >
+              Phone Number:
+            </label>
             <input
               type="text"
               id="phoneNumber"
@@ -121,11 +145,15 @@ const SinglePatient = () => {
               value={patientInfo.phoneNumber}
               onChange={handlePatientInfoChange}
               className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
-              
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="emergencyContact" className="block text-gray-700 font-bold mb-2">Emergency Contact:</label>
+            <label
+              htmlFor="emergencyContact"
+              className="block text-gray-700 font-bold mb-2"
+            >
+              Emergency Contact:
+            </label>
             <input
               type="text"
               id="emergencyContact"
@@ -133,20 +161,22 @@ const SinglePatient = () => {
               value={patientInfo.emergencyContact}
               onChange={handlePatientInfoChange}
               className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
-              
             />
           </div>
         </div>
-  
       </section>
 
-      <hr className="my-8" />
 
       <section>
         <h1 className="text-2xl font-bold mb-8">Vital Signs</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="mb-4">
-            <label htmlFor="temperature" className="block text-gray-700 font-bold mb-2">Temperature (°C):</label>
+            <label
+              htmlFor="temperature"
+              className="block text-gray-700 font-bold mb-2"
+            >
+              Temperature (°C):
+            </label>
             <input
               type="text"
               id="temperature"
@@ -154,11 +184,15 @@ const SinglePatient = () => {
               value={vitalSigns.temperature}
               onChange={handleVitalSignsChange}
               className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
-              
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="pressure" className="block text-gray-700 font-bold mb-2">Blood Pressure (mmHg):</label>
+            <label
+              htmlFor="pressure"
+              className="block text-gray-700 font-bold mb-2"
+            >
+              Blood Pressure (mmHg):
+            </label>
             <input
               type="text"
               id="pressure"
@@ -166,11 +200,15 @@ const SinglePatient = () => {
               value={vitalSigns.pressure}
               onChange={handleVitalSignsChange}
               className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
-              
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="weight" className="block text-gray-700 font-bold mb-2">Weight (kg):</label>
+            <label
+              htmlFor="weight"
+              className="block text-gray-700 font-bold mb-2"
+            >
+              Weight (kg):
+            </label>
             <input
               type="text"
               id="weight"
@@ -178,11 +216,15 @@ const SinglePatient = () => {
               value={vitalSigns.weight}
               onChange={handleVitalSignsChange}
               className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
-              
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="height" className="block text-gray-700 font-bold mb-2">Height (cm):</label>
+            <label
+              htmlFor="height"
+              className="block text-gray-700 font-bold mb-2"
+            >
+              Height (cm):
+            </label>
             <input
               type="text"
               id="height"
@@ -196,12 +238,15 @@ const SinglePatient = () => {
         </div>
       </section>
 
-      <hr className="my-8" />
-
       <section>
         <h1 className="text-2xl font-bold mb-8">Diagnosis</h1>
         <div className="mb-4">
-          <label htmlFor="summary" className="block text-gray-700 font-bold mb-2">Summary:</label>
+          <label
+            htmlFor="summary"
+            className="block text-gray-700 font-bold mb-2"
+          >
+            Summary:
+          </label>
           <textarea
             id="summary"
             name="summary"

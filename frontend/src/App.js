@@ -9,7 +9,6 @@ import AddDiagnosis from "./pages/AddDiagnosis";
 import SinglePatient from "./pages/SinglePatient";
 import Dashboard from "./pages/Dashboard";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Navbar from "./components/navbar";
 import HomePage from "./pages/Home";
 
 const router = createBrowserRouter([
@@ -33,7 +32,6 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-     
       <RouterProvider router={router} />
     </>
   );

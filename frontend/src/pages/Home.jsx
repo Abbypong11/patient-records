@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import BackgroundImage from "../assets/hospital.jpg";
@@ -18,7 +19,7 @@ export default function HomePage() {
       
       {/* Content */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
-        <h1 className="text-4xl md:text-6xl lg:text-8xl">Welcome to Medikeep</h1>
+        <h1 className="text-4xl md:text-6xl lg:text-6xl">Welcome to MedStore Patients Records Management System</h1>
         
         <div className="flex justify-center mt-8">
           {/* button 1 */}
@@ -34,3 +35,36 @@ export default function HomePage() {
     </div>
   );
 }
+
+
+
+
+
+//import React from 'react';
+// import { Link } from 'react-router-dom';
+
+// const HomePage = () => {
+//   return (
+//     <div className="bg-gray-100 min-h-screen flex flex-col md:flex-row items-center">
+//       <div className="container mx-auto px-4">
+//         <div className="flex flex-col md:flex-row items-center justify-between">
+//           <div className="md:w-1/2 mb-6 md:mb-0 md:pr-8">
+//             <h1 className="text-2xl md:text-4xl font-bold mb-4">Welcome to MEDSTORE</h1>
+//             <h2 className="text-1xl md:text-3xl font-bold mb-4">Patients Records <br /> Management System</h2>
+//             <p className="text-base md:text-lg"></p>
+//           </div>
+//           <div className="md:w-1/2 md:text-right mt-4 md:mt-0">
+//             <div className="flex justify-end items-center">
+//               <Link to="/register" className="text-black hover:text-gray-800 mr-4">Sign Up</Link>
+//               <Link to="/login" className="text-black hover:text-gray-800">Login</Link>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+
+
+// export default HomePage;

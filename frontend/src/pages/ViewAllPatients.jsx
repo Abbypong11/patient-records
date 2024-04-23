@@ -6,7 +6,7 @@ const ViewAllPatients = ({ patients, onDelete }) => {
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-6 py-6">
         <h1 className="text-4xl font-bold">Patients Records</h1>
-        <Link to="/addpatient" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <Link to="/dashboard/addpatient" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
           Add Patient
         </Link>
       </div>

@@ -12,6 +12,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MoreIcon from "@mui/icons-material/MoreVert";
+import { Link } from "react-router-dom";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -94,8 +95,8 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Log Out</MenuItem>
+      <Link to="/dashboard/me"><MenuItem onClick={handleMenuClose}>Profile</MenuItem></Link>
+      <Link to="/"><MenuItem onClick={handleMenuClose}>Log Out</MenuItem></Link>
     </Menu>
   );
 
@@ -152,7 +153,7 @@ export default function PrimarySearchAppBar() {
             component="div"
             sx={{ display: { xs: "none", sm: "block", marginRight:"400px" } }}
           >
-            MEDIKEEP Patients Records Management System
+            MEDSTORE Patients Records Management System
           </Typography>
           <Search>
             <SearchIconWrapper>
