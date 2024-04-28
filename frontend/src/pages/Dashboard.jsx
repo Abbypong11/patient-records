@@ -6,39 +6,34 @@ export default function Dashboard() {
   return (
     <>
       <Navbar />
-      <div className="relative h-screen overflow-hidden">
+      <div className="relative overflow-hidden">
         <div className="flex h-full">
-          <div className="flex w-1/6 h-full pt-10 bg-blue-600">
+          <div className="flex w-1/6 h-screen pt-10 bg-blue-900">
             <ul>
-              <Link to="/dashboard/me">
-                <button className="text-white text-left font-semibold p-4">
-                 Dashboard
-                </button>
+              <Link to="/dashboard/dash">
+                <li className="text-white text-left font-semibold p-4">
+                  Dashboard
+                </li>
               </Link>
               <Link to="/dashboard/patients">
-                <button className="text-white text-left font-semibold p-4">
-                  Patients Records
-                </button>
+                <li className="text-white text-left font-semibold p-4">
+                  Patients 
+                </li>
               </Link>
               <Link to="/dashboard/addpatient">
-                <button className="text-white text-left font-semibold p-4">
+                <li className="text-white text-left font-semibold p-4">
                   Add new Patient
-                </button>
+                </li>
               </Link>
               <Link to="/dashboard/addvitals">
-                <button className="text-white text-left font-semibold p-4">
+                <li className="text-white text-left font-semibold p-4">
                   Add Vital Signs
-                </button>
+                </li>
               </Link>
               <Link to="/dashboard/adddiagnosis">
-                <button className="text-white text-left font-semibold p-4">
+                <li className="text-white text-left font-semibold p-4">
                   Add Diagnosis
-                </button>
-              </Link>
-              <Link to="/">
-                <button className="text-white text-left font-semibold p-4">
-                  Log Out
-                </button>
+                </li>
               </Link>
             </ul>
           </div>

@@ -14,7 +14,7 @@ const Profile = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className='font-bold mb-16 text-4xl'>My Profile</h1>
+
       {image && (
         <img
           className="w-32 h-32 rounded-full mb-4"

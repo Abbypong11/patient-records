@@ -1,22 +1,17 @@
-import express from "express";
-import {
-  createUser,
-  loginUser,
-  getUser,
-  logoutUser,
-} from "../controllers/user.controller.js";
+import { Router } from "express";
+import { loginUser, logoutUser, registerUser, userProfile } from "../controllers/user.controller.js";
+import { checkUserToken } from "../middlewares/auth.middleware.js";
 
-// Create a route
-const router = express.Router();
+//Create user router
+const userRouter = Router();
 
-// Define routes
-router.post("/register", createUser);
+//Define your routes
+userRouter.post("/register", registerUser);
 
-router.post("/login", loginUser);
+userRouter.post("/login", loginUser);
 
-router.get("/me", getUser);
+userRouter.get("/me", checkUserToken, userProfile);
 
-router.post("/logout", logoutUser);
+userRouter.post("/logout", checkUserToken, logoutUser);
 
-// Export router
-export default router;
+export default userRouter;

@@ -10,6 +10,8 @@ import SinglePatient from "./pages/SinglePatient";
 import Dashboard from "./pages/Dashboard";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import HomePage from "./pages/Home";
+import Dash from "./components/dash";
+
 
 const router = createBrowserRouter([
   { path: "/register", element: <Register /> },
@@ -19,6 +21,8 @@ const router = createBrowserRouter([
     path: "/dashboard",
     element: <Dashboard />,
     children: [
+      { path: "", element: <Dash /> },
+      { path: "/dashboard/dash", element: <Dash /> },
       { path: "/dashboard/me", element: <UserProfile /> },
       { path: "/dashboard/addpatient", element: <AddPatient /> },
       { path: "/dashboard/patients", element: <ViewAllpatients /> },

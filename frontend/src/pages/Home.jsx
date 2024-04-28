@@ -1,46 +1,65 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
-import BackgroundImage from "../assets/hospital.jpg";
-// import Sidebar from "../components/sidebar";
+// import BackgroundImage from "../assets/doctorhall.jpg";
 
 export default function HomePage() {
   return (
     <div className="relative h-screen overflow-hidden">
       {/* Background Image */}
       <img
-        src={BackgroundImage}
+        src="https://media.istockphoto.com/id/921644524/photo/medical-student-textbook-and-black-stethoscope.jpg?s=612x612&w=0&k=20&c=tSCkx5QJnWCjk1ft62omnfLcikvJ1_wEnDeydmDwQcw="
         alt="background-pic"
         className="absolute top-0 left-0 w-full h-full object-cover"
       />
-      
+
       {/* Black Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
-      
+
+      {/* Transparent Navbar */}
+      <nav className="absolute top-0 left-0 w-full flex justify-between p-6">
+        <h1 className="text-white font-extrabold text-4xl italic">MEDSTORE</h1>
+        <ul className="flex items-center">
+          <li>
+            <Link
+              to="/register"
+              className="text-white text-2xl italic font-bold mr-2 hover:text-orange-500 transition duration-300"
+            >
+              Register
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/login"
+              className="text-white text-2xl italic font-bold ml-4 hover:text-orange-500 transition duration-300"
+            >
+              Log In
+            </Link>
+          </li>
+        </ul>
+      </nav>
+
       {/* Content */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
-        <h1 className="text-4xl md:text-6xl lg:text-6xl">Welcome to MedStore Patients Records Management System</h1>
-        
-        <div className="flex justify-center mt-8">
-          {/* button 1 */}
-          <Link to="/login" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg mx-4">
-            Login
-          </Link>
-          {/* button 2 */}
-          <Link to="/register" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg mx-4">
-            Register
-          </Link>
-        </div>
+        <h1 className="text-4xl md:text-6xl lg:text-6xl mb-10">
+          Welcome to MedStore{" "}
+        </h1>
+
+        <p className="text-2xl md:text-4xl lg:text-4xl">
+          Patients Records Management System
+        </p>
+
+        <p className="text-xl md:text-3xl lg:text-3xl mt-7">
+          Please Login or Register if new here
+        </p>
+
+
+    
       </div>
     </div>
   );
 }
 
 
-
-
-
-//import React from 'react';
 // import { Link } from 'react-router-dom';
 
 // const HomePage = () => {
@@ -64,7 +83,5 @@ export default function HomePage() {
 //     </div>
 //   );
 // };
-
-
 
 // export default HomePage;

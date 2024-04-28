@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const AddDiagnosis = () => {
+  const navigate=useNavigate()
+  const handleNavigate=()=>{
+    navigate('/dashboard/patients')
+  }
   const [diagnosisDetails, setDiagnosisDetails] = useState({
     patientId: "",
     summary: "",
@@ -32,6 +37,7 @@ const AddDiagnosis = () => {
           className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
           required
         >
+          <option value="patientId">Jade Nana</option>
           <option value="patientId">Patient Name</option>
         </select>
       </div>
@@ -60,6 +66,7 @@ const AddDiagnosis = () => {
           style={{ marginBottom: "20px" }}
           sx={{ bgcolor: "#1d4ed8", width: "100%" }}
           variant="contained"
+          onClick={handleNavigate}
         >
           Add Diagnosis
         </Button>
